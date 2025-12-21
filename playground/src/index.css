@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import '@quick-table/react/styles.css'
 
+@source "../../packages/react/src";
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

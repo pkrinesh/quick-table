@@ -1,4 +1,4 @@
 // @quick-table/react
 // TanStack Table wrapper for React
 
-export {};
+export * from './data-table/index.js'

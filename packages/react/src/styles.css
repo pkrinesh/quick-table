@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import '@quick-table/react/styles.css'
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -77,13 +75,4 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }

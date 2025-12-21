@@ -1,0 +1,33 @@
+{
+  "name": "@quick-table/core",
+  "version": "0.0.1",
+  "description": "Core logic for quick-table",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "keywords": ["table", "tanstack", "data-table"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quick-table/quick-table"
+  }
+}

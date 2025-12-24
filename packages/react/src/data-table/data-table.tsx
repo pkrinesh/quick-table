@@ -5,9 +5,9 @@ import { DataTableProvider } from './data-table-context.js'
 import type { DataTableProps } from './types.js'
 import type { Table as TableType } from '@tanstack/react-table'
 import { Table as UITable } from '#/components/ui/table.js'
-import { cn } from '#/lib/utils.js'
+import { cn } from '#/lib/utils'
 
-interface InternalDataTableProps<TData> extends DataTableProps {
+type InternalDataTableProps<TData> = DataTableProps & {
 	table: TableType<TData>
 }
 

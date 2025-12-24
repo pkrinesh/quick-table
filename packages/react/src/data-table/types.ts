@@ -12,12 +12,12 @@ import type {
 // Hook Options & Return
 // ============================================================================
 
-export interface UseDataTableOptions<TData> extends Omit<TableOptions<TData>, 'getCoreRowModel'> {
+export type UseDataTableOptions<TData> = Omit<TableOptions<TData>, 'getCoreRowModel'> & {
 	data: TData[]
-	columns: ColumnDef<TData, unknown>[]
+	columns: ColumnDef<TData>[]
 }
 
-export interface UseDataTableReturn<TData> {
+export type UseDataTableReturn<TData> = {
 	/** Original TanStack table instance */
 	table: Table<TData>
 	/** Composed table component */
@@ -28,42 +28,42 @@ export interface UseDataTableReturn<TData> {
 // Component Props
 // ============================================================================
 
-export interface DataTableProps {
+export type DataTableProps = {
 	className?: string
 	children?: React.ReactNode
 	/** Max height for the table container. Enables scrolling with sticky header. */
 	maxHeight?: string
 }
 
-export interface DataTableHeaderProps {
+export type DataTableHeaderProps = {
 	className?: string
 	children?: React.ReactNode
 }
 
-export interface DataTableHeaderRowProps<TData> {
+export type DataTableHeaderRowProps<TData> = {
 	headerGroup: HeaderGroup<TData>
 	className?: string
 	children?: React.ReactNode
 }
 
-export interface DataTableHeaderCellProps<TData> {
+export type DataTableHeaderCellProps<TData> = {
 	header: Header<TData, unknown>
 	className?: string
 	children?: React.ReactNode
 }
 
-export interface DataTableBodyProps {
+export type DataTableBodyProps = {
 	className?: string
 	children?: React.ReactNode
 }
 
-export interface DataTableRowProps<TData> {
+export type DataTableRowProps<TData> = {
 	row: Row<TData>
 	className?: string
 	children?: React.ReactNode
 }
 
-export interface DataTableCellProps<TData> {
+export type DataTableCellProps<TData> = {
 	cell: Cell<TData, unknown>
 	className?: string
 	children?: React.ReactNode
@@ -79,6 +79,6 @@ export type DataTableComponent = React.FC<DataTableProps>
 // Context
 // ============================================================================
 
-export interface DataTableContextValue<TData = unknown> {
+export type DataTableContextValue<TData = unknown> =  {
 	table: Table<TData>
 }

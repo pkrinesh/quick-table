@@ -12,7 +12,7 @@ export function useDataTableContext<TData>(): DataTableContextValue<TData> {
 	return context as DataTableContextValue<TData>
 }
 
-export interface DataTableProviderProps<TData> {
+export type DataTableProviderProps<TData> = {
 	table: Table<TData>
 	children: React.ReactNode
 }

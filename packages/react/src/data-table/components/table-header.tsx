@@ -1,9 +1,8 @@
+import { TableHead, TableRow, TableHeader as UITableHeader } from '#/components/ui/table.js'
+import { cn } from '#/lib/utils'
 import { flexRender } from '@tanstack/react-table'
-import * as React from 'react'
 import { useDataTableContext } from '../data-table-context.js'
 import type { DataTableHeaderProps } from '../types.js'
-import { TableHeader as UITableHeader, TableRow, TableHead } from '#/components/ui/table.js'
-import { cn } from '#/lib/utils.js'
 
 export function TableHeader({ className, children }: DataTableHeaderProps) {
 	const { table } = useDataTableContext()

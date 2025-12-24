@@ -3,7 +3,7 @@ import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
 
-export default tseslint.config(
+export default tseslint(
   {
     ignores: ["**/dist/**", "**/node_modules/**", "**/*.config.{js,ts}"],
   },
@@ -43,5 +43,5 @@ export default tseslint.config(
         { checksVoidReturn: { attributes: false } },
       ],
     },
-  }
+  },
 );
